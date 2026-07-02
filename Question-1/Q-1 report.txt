@@ -1,0 +1,7 @@
+SYSTEM ENVIRONMENT REPORT
+-------------------------
+Username: bhanu
+Groups: bhanu adm cdrom sudo dip plugdev lxd
+Shell: /bin/bash
+Current Directory: /home/bhanu/lab_assignment/question_1
+Network Status: Connected (0% packet loss)
