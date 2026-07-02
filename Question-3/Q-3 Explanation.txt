@@ -1,0 +1,23 @@
+Command: mkdir -p ~/lab_assignment/question_3 && cd ~/lab_assignment/question_3
+Explanation: I built an isolated directory for Question 3 to conduct file system simulations regarding hard links and symbolic links.
+
+Command: echo "Important Project Data" > original.txt
+Explanation: This writes text content into a fresh file named 'original.txt', creating our baseline source target file.
+
+Command: ln original.txt hardlink.txt
+Explanation: The 'ln' utility generates a hard link pointing to the exact same physical storage blocks on disk as the source file.
+
+Command: ln -s original.txt symlink.txt
+Explanation: The 'ln -s' command creates a soft or symbolic link, which acts as a text path shortcut pointing directly to the filename string rather than the raw data sectors.
+
+Command: ls -li
+Explanation: The 'ls -li' command exposes the index node (inode) numbers. This proves that 'original.txt' and 'hardlink.txt' share an identical inode index, while the symbolic link points to a unique, separate inode block.
+
+Command: rm original.txt
+Explanation: I executed the 'rm' command to delete the target file to observe how both link variants respond to data loss.
+
+Command: cat hardlink.txt
+Explanation: Running 'cat' on the hard link successfully outputs the text data because the file data block is preserved as long as at least one hard pointer reference remains alive.
+
+Command: cat symlink.txt
+Explanation: Running 'cat' on the symbolic link triggers an error since the file path target it was pointing to has been deleted, resulting in a broken or orphaned link.

@@ -1,0 +1,16 @@
+FILE SYSTEM AND LINK ANALYSIS REPORT
+------------------------------------
+1. INODE OBSERVATIONS:
+   - The original file and hard link share an identical inode number.
+   - The symbolic link possesses an independent, separate inode number.
+
+2. LINK BEHAVIOR ANALYSIS:
+   - Hard Link: Directly mirrors the inode of the source file. It acts as an alternate name for the data on disk.
+   - Symbolic Link: A path pointer that references a file's string name rather than its physical block location.
+
+3. CONSEQUENCE OF DELETING THE ORIGINAL FILE:
+   - The hard link survives and safely preserves file data because the underlying disk block retains an active link count.
+   - The symbolic link breaks, pointing to a non-existent path name (orphaned shortcut error).
+
+4. CONCLUSIONS SUMMARY:
+   Hard links are resilient file mirrors confined to the same file system partition. Symbolic links are dynamic path aliases that span boundaries but break permanently if the target resource is renamed, removed, or moved.
