@@ -1,0 +1,10 @@
+PROJECT WORKSPACE SECURITY REPORT
+---------------------------------
+1. Directory Structure: Created at ~/lab_assignment/question_2
+2. Default Umask Value: 0022
+3. File Permissions Before: -rw-r--r-- (Publicly readable)
+4. File Permissions After:  -rw------- (Strictly private to owner)
+5. File Ownership: Owner: bhanu | Group: bhanu
+
+EXPLANATION OF DATA PROTECTION:
+Modifying permissions to '600' (-rw-------) ensures that sensitive project data is strictly protected. By removing all read, write, and execute permissions from groups and external users, the file completely isolates project assets from unauthorized lateral access on a multi-user system.

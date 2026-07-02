@@ -1,0 +1,14 @@
+Command: mkdir -p ~/lab_assignment/question_2 && cd ~/lab_assignment/question_2
+Explanation: I navigated into a dedicated folder for Question 2 and generated a clean workspace area to handle file security and permission evaluations.
+
+Command: touch project_doc.txt
+Explanation: This command instantiates an empty baseline file named 'project_doc.txt' to simulate a confidential corporate workspace asset.
+
+Command: umask
+Explanation: Running the 'umask' command reveals the environment's default permission mask (0022). This value dictates the baseline read/write/execute configuration automatically applied to newly created system files.
+
+Command: ls -l project_doc.txt
+Explanation: The 'ls -l' utility outputs the detailed metadata of the file, demonstrating the initial permissions before manual modification where group and public accounts still possess read capabilities.
+
+Command: chmod 600 project_doc.txt
+Explanation: I used the 'chmod 600' command to alter access rights, stripping away all read, write, and execute permissions from groups and external users. This strictly restricts data operations exclusively to the file owner.
