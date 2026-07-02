@@ -1,0 +1,17 @@
+Command: mkdir -p ~/lab_assignment/question_4 && cd ~/lab_assignment/question_4
+Explanation: I created a separate directory for Question 4 to isolate operations involving input/output redirection and system ceiling boundaries.
+
+Command: lsof -u bhanu | head -n 10
+Explanation: The 'lsof' utility lists all open file descriptors linked to my username, and piping it into 'head' displays the first ten results to review how terminal processes handle stream paths.
+
+Command: ls -la . non_existent_folder_test > output.log 2> error.log
+Explanation: This command runs a dual-result execution, redirecting standard output (FD 1) into 'output.log' using '>' and intercepting system errors (FD 2) into 'error.log' using '2>'.
+
+Command: cat output.log
+Explanation: The 'cat' command prints the contents of 'output.log', confirming it smoothly isolated only the successful directory listing stream.
+
+Command: cat error.log
+Explanation: Running 'cat' here verifies that the standard error channel properly captured the missing directory failure message.
+
+Command: ulimit -n
+Explanation: The 'ulimit -n' command inspects the operating system kernel configuration to output the maximum ceiling of open file handlers a single terminal process can hold before triggering access failures.

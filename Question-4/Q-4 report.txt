@@ -1,0 +1,17 @@
+FILE ACCESS AND I/O INVESTIGATION REPORT
+-----------------------------------------
+1. OPEN FILES ANALYSIS:
+   - Active processes were tracked via 'lsof', showing background terminals mappings.
+
+2. FILE DESCRIPTOR OBSERVATIONS:
+   - Linux assigns specific low-level integers to streams: FD 0 (Standard Input), FD 1 (Standard Output), and FD 2 (Standard Error).
+
+3. STREAM REDIRECTION MATRIX:
+   - Successful outputs were routed to 'output.log' via the '>' operator.
+   - Error logs were captured into 'error.log' using the '2>' operator.
+
+4. SYSTEM RESOURCE LIMITS:
+   - Max open files limit per process: 1024 (verified via ulimit -n).
+
+5. TECHNICAL EXPLANATION OF LINUX I/O MANAGEMENT:
+   Linux treats everything as a file. When a process requests access to a file, the kernel returns a file descriptor pointer. If logging applications fail to close these handlers or exceed the 'ulimit' cap, it exhausts the file descriptor table space, dropping connections and preventing fresh log files from opening.
