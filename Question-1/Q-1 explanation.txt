@@ -1,0 +1,17 @@
+Command: mkdir -p ~/lab_assignment/question_1 && cd ~/lab_assignment/question_1
+Explanation: I used the 'mkdir -p' command to create a structured project directory for Question 1 and instantly navigated into it using 'cd'. This ensures all lab files generated for this question are stored in one isolated location.
+
+Command: whoami && groups
+Explanation: The 'whoami' command prints the active logged-in username, while the 'groups' command lists all security groups the user belongs to. This confirms that my account has elevated 'sudo' (administrator) privileges within the system environment.
+
+Command: echo $SHELL
+Explanation: This command prints the value of the environment variable '$SHELL'. The output confirms that the system is currently utilizing the standard Bash (Bourne-Again Shell) command language interpreter for executing user inputs.
+
+Command: pwd
+Explanation: The 'pwd' (Print Working Directory) command displays the absolute file system path of the directory I am currently working in. This verifies that I am successfully running commands inside my designated lab workspace.
+
+Command: ls -la
+Explanation: The 'ls -la' command lists all contents within the current directory, using the '-l' flag for a detailed long-list format (permissions, sizes) and the '-a' flag to reveal hidden configuration files.
+
+Command: ping -c 4 google.com
+Explanation: I executed the 'ping' command with a '-c 4' flag to send exactly four network packets to an external domain. The 0% packet loss response successfully verifies that the Ubuntu WSL instance has active internet connectivity.
