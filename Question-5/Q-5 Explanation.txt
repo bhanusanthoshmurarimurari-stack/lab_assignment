@@ -1,0 +1,14 @@
+Command: mkdir -p ~/lab_assignment/question_5 && cd ~/lab_assignment/question_5
+Explanation: I structured a separate working folder for Question 5 to handle system storage audits and diagnostic report generation.
+
+Command: lsblk
+Explanation: The 'lsblk' utility prints the physical and virtual storage hardware tree layout, tracking available block storage disks and active system partitioning maps.
+
+Command: df -h .
+Explanation: I utilized the 'df -h' command with a dot argument to assess the storage space capacity metrics of the active partition layout in human-readable terms.
+
+Command: df -i .
+Explanation: The 'df -i' execution maps the active file system's index node allocation, verifying remaining inode headroom to avoid system lockouts.
+
+Command: vi Storage_Assessment_Report.txt
+Explanation: I initialized the 'vi' core text editor to compose the final storage report structure and document infrastructure optimization recommendations.
